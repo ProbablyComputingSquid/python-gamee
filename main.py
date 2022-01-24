@@ -1,58 +1,15 @@
 ##########################
 # Made by ComputingSquid #
 ##########################
-from colorama import init
-from colorama import Fore, Back, Style
-from time import sleep
-import random
-import os as yupOS
 
+#wow its a python gaem
+
+
+import wowinsanepog
 randomMoneyAmount = random.randint(100,500000)
 # written text???
 ### credit to EmojiGame for initial writing and question functions
-def write(txt, newline = True, speed = 0.05,color = 'WHITE'):
-  for i in txt:
-    sleep(speed)
-    if color == 'WHITE':      
-      print(Fore.WHITE + i, end = "", flush = True)
-    elif color == 'RED':
-      print(Fore.RED + i, end = "", flush = True)
-    elif color == 'BLUE':
-      print(Fore.BLUE + i, end = "", flush = True)
-    elif color == 'GREEN':
-      print(Fore.GREEN + i, end = "", flush = True)
-    elif color == 'MAGENTA':
-      print(Fore.MAGENTA + i, end = "", flush = True)
-    elif color == 'YELLOW':
-      print(Fore.YELLOW + i, end = "", flush = True)
-    elif color == 'CYAN':
-      print(Fore.CYAN + i, end = "", flush = True)
-    else:
-      print(Fore.WHITE + i, end = "", flush = True)
-  if newline:
-    print("")
 
-# idk
-def ask(txt):
-  write(txt, False)
-  ans = input(" ")
-  return ans
-
-# newline because why now
-def newline(num):
-  while num != 0:
-    print("")
-    num -= 1
-
-#le clear screen function
-def clear():  
-    # for windows 
-    if yupOS.name == 'nt': 
-      # Clears screen (Windows)
-      _ = yupOS.system('cls') 
-    else: 
-      # Clears screen (Linux or mac)
-      _ = yupOS.system('clear') 
 
 #variables
 randomMoneyAmount = random.randint(100,500000)
@@ -85,6 +42,7 @@ while finished == 0:
   write("Anyways...")
   sleep(1.5)
   write("Lets get around to the real stuff\n")
+  sleep(1)
   clear()
   write("DAY 1 of your new life \n")
   sleep(1)
@@ -140,6 +98,7 @@ while finished == 0:
       tried = 'yes'
     elif choice == '3':
       write("Ok time for stock trading...")
+      write("STONKS", color = 'RED')
       write("What do you want to invest in?")
       stockinvested = ask("[1]: Microsoft\n or:\n[2]:Amazon\n")
       if stockinvested == '1':
@@ -159,6 +118,13 @@ while finished == 0:
         sleep(1)
         sadness = 100000
         tried = 'yes'
+      elif choice.lower() == 'stonks':
+        write("STONKS!!!!!", color = 'RED')
+        write("You become stonks and do pro investing")
+        write("+1000000 Stonkieness")
+        write("+1000000 Dollars")
+        money += 1000000
+        stonkieness = 1000000
       else:
         write("You didn't invest in anything...")
         days_survived += 1
@@ -169,7 +135,7 @@ while finished == 0:
       clear()
       write("Hmm Crypto mining?")
       write("What crypto to mine....")
-      crypto_mined = ask("[1]: Bitcoin, Time: 1 week, Expected gains: Good\n[2]: Ethereum, Time: 6 months, Expected gains: Good\n[3]: LiteCoin, Time: 10 minuted, Expected gains: Poor, but easy to mine\n ")
+      crypto_mined = ask("[1]: Bitcoin, Time: 1 week, Expected gains: Good\n[2]: Ethereum, Time: 6 months, Expected gains: OK\n[3]: LiteCoin, Time: 10 minuted, Expected gains: Poor, but easy to mine\n ")
       clear()
       if crypto_mined == '1':
         write("Bitcoin?")
@@ -191,11 +157,13 @@ while finished == 0:
         write("182 days and 400 Starbucks coffees later...")
         write("You got 1 ethereum")
         write("Congrats")
+        sleep(1)
         write("+1 Ethereum")
         write("-1 Ethereum")
         write("+3267 dollars")
         write("+400 Coffees")
         write("-400 Coffees")
+        sleep(2)
         days_survived +=1
         tried = 'yes'
       elif crypto_mined == '3':
@@ -238,7 +206,14 @@ while finished == 0:
         write("A delicious BaconBurger...")
         sleep(1)
         write("A good choice.")
-        write("")
+        write("You order and pay")
+        money -= 2
+        write("When you arrive at your house you turn on Disney Minus, Start The Simpsons and bite into your delicious BaconBurger")
+        write("It was very delicious.")
+        write("It's too bad that you didn't earn any money.")
+        write("+100 Self Esteem")
+        selfEsteem += 100
+        days_survived += 1
       elif burger == '2':
         clear()
         write("A delicious McBurger...")
@@ -248,14 +223,18 @@ while finished == 0:
         write("The McBurger costs 2 dollars")
         write("You hand over two dollars to the clerk")
         money -= 2
-        burgers = 1
         write("You take the burger and drive back to your home to watch The Simpsons reruns")
         sleep(1)
         write("You plop down on the couch and turn on your TV and open Disney Minus")
         sleep(2)
         write("1 Hour later...", True, 0.08)
-        write("And one ")
-        write("ok")
+        write("You finally finished watching ONE episode of the simpsons.")
+        write("That was fun.")
+        write("No money gained though...")
+        sleep(1)
+        write("+1 Blandness")
+        write("+1 Boredom")
+        sleep(2)
         tried = "yes"
       elif burger == '3':
         clear()
@@ -268,6 +247,7 @@ while finished == 0:
         write("You die of food posisoning from the burger")
         sleep(1)
         write("That was dumb...")
+        sleep(1)
         tried = 'yes'
       elif burger == '4':
         clear()
@@ -301,11 +281,13 @@ while finished == 0:
       write("Invalid input...")
       write("Try again")
       write("Actually never mind because you had an invalid input, YOU DIEDDDDD")
+      write("Achieved ending 'invalid input'", color = 'green')
       sleep(10)
       write("JK")
       write("Now you have to try again")
       write("So let this be a lesson to you")
       write("www.tinyurl.com/4r8vaa6p")
+      sleep(3)
       tried = 'not yet'    
     
   finished = 1
@@ -313,6 +295,7 @@ while finished == 0:
 clear()
 write("You survived " + str(days_survived) + " days,")
 write("And had " + str(money) + " Dollars")
+write("You have " + str(selfEsteem) + " self esteem")
 if homeless:
   write("And... Died homeless")
   write("Seriously....")
@@ -321,11 +304,13 @@ else:
   write("")
 if days_survived <= 3:
   write(str(days_survived) + " day(s) wasn't that long...")
-  write("could have done better")
+  write("smh could have done better")
 elif days_survived > 3:
   write("Good job")
 elif days_survived > 10:
   write("Nice... You did a great job. Worthy of appriciation..")
 else:
   write("Good job, you survived pretty long...")
-write("")
+  write("Or you wasted your life mining ethereum...")
+
+#HIhihih
